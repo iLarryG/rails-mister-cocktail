@@ -1,0 +1,27 @@
+<div class="text-center">
+  <h1>My cocktails recipes</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-4">
+        <table>  
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @cocktails.each do |cocktail| %>
+            <tr>
+              <td><%= cocktail.name %></td>
+              <td> |<%= link_to 'Show', cocktail %>|</td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <b><%= link_to "Add a new cocktail", new_cocktail_path %></b>
+</div>
