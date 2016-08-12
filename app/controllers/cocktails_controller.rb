@@ -17,16 +17,17 @@ class CocktailsController < ApplicationController
 
     # if 
     @cocktail.save
-      redirect_to @cocktail
+    redirect_to @cocktail
     # else
     #   render :new
     # end
+
   end
 
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo, :photo_cache)
   end
 
 end
